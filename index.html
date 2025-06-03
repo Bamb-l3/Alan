@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goriviajes Prototipo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header, footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    section {
+      padding: 2em;
+      background: white;
+      margin: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, button, textarea {
+      padding: 0.8em;
+      margin: 0.5em 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    h2 {
+      color: #0077b6;
+    }
+    .destinos, .paquetes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    .card {
+      background: #e0f7fa;
+      padding: 1em;
+      border-radius: 10px;
+      width: 250px;
+    }
+    .success {
+      background: #d4edda;
+      padding: 1em;
+      color: #155724;
+      border-radius: 5px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #023e8a;
+      color: white;
+      padding: 1em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5em;
+    }
+    .footer-info {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Goriviajes</h1>
+  <p>Explora. Descubre. Vive.</p>
+</header>
+
+<nav>
+  <a href="#login">Ingresar</a>
+  <a href="#destinos">Destinos</a>
+  <a href="#fechas">Fechas</a>
+  <a href="#paquetes">Paquetes</a>
+  <a href="#agenda">Agendar</a>
+  <a href="#terminos">Términos</a>
+  <a href="#orden">Resumen</a>
+  <a href="#pago">Pago</a>
+  <a href="#soporte">Soporte</a>
+</nav>
+
+<section id="login">
+  <h2>1. Ingresar o Registrarse</h2>
+  <input type="text" placeholder="Correo electrónico">
+  <input type="password" placeholder="Contraseña">
+  <label><input type="checkbox"> Acepto términos y condiciones</label>
+  <button>Ingresar</button>
+  <img src="https://via.placeholder.com/300x150?text=Goriviajes" alt="Imagen bienvenida">
+</section>
+
+<section id="destinos">
+  <h2>2. Destinos disponibles</h2>
+  <div class="destinos">
+    <div class="card">
+      <h3>Riviera Maya</h3>
+      <p>Playas, cultura y aventura.</p>
+    </div>
+    <div class="card">
+      <h3>Perú - Machu Picchu</h3>
+      <p>Historia y naturaleza.</p>
+    </div>
+    <div class="card">
+      <h3>Europa clásica</h3>
+      <p>París, Roma, Barcelona.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fechas">
+  <h2>3. Fechas disponibles</h2>
+  <label for="destino">Selecciona destino:</label>
+  <select id="destino">
+    <option>Riviera Maya</option>
+    <option>Perú</option>
+    <option>Europa clásica</option>
+  </select>
+  <label for="fecha">Selecciona fecha:</label>
+  <select id="fecha">
+    <option>15 Junio 2025</option>
+    <option>1 Julio 2025</option>
+    <option>20 Agosto 2025</option>
+  </select>
+</section>
+
+<section id="paquetes">
+  <h2>4. Paquetes</h2>
+  <div class="paquetes">
+    <div class="card">
+      <h3>Paquete Económico</h3>
+      <p>Desde $499 USD</p>
+      <ul>
+        <li>Vuelo redondo</li>
+        <li>2 noches hotel</li>
+        <li>Tour guiado básico</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Paquete Experiencia</h3>
+      <p>Desde $899 USD</p>
+      <ul>
+        <li>Vuelo + 4 noches hotel</li>
+        <li>Transporte local</li>
+        <li>Tours premium</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Paquete VIP</h3>
+      <p>Desde $1399 USD</p>
+      <ul>
+        <li>Todo incluido</li>
+        <li>Atención personalizada</li>
+        <li>Acceso VIP a eventos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <h2>5. Agenda tu viaje</h2>
+  <p>Seleccionaste: <strong>Riviera Maya</strong> - 15 Junio 2025</p>
+  <p class="success">Agenda exitosa: Disponibilidad confirmada.</p>
+  <button>Continuar</button>
+</section>
+
+<section id="terminos">
+  <h2>6. Términos y Condiciones</h2>
+  <textarea rows="5" readonly>
+Al reservar con Goriviajes aceptas nuestras políticas de cambios, cancelaciones, reembolsos y uso de datos.
+  </textarea>
+  <label><input type="checkbox"> He leído y acepto los términos</label>
+  <button>Aceptar</button>
+</section>
+
+<section id="orden">
+  <h2>7. Orden de viaje</h2>
+  <p><strong>Destino:</strong> Riviera Maya</p>
+  <p><strong>Paquete:</strong> Experiencia</p>
+  <p><strong>Fecha:</strong> 15 Junio 2025</p>
+  <p><strong>Total:</strong> $899 USD</p>
+</section>
+
+<section id="pago">
+  <h2>8. Método de Pago</h2>
+  <label>Selecciona método:</label>
+  <select>
+    <option>Tarjeta de crédito</option>
+    <option>Tarjeta de débito</option>
+    <option>Transferencia bancaria</option>
+    <option>Efectivo en OXXO / 7-Eleven</option>
+  </select>
+  <button>Procesar pago</button>
+</section>
+
+<section id="soporte">
+  <h2>9. Soporte</h2>
+  <p>¿Dudas o ayuda con tu viaje?</p>
+  <ul>
+    <li>Email: contacto@goriviajes.com</li>
+    <li>Teléfono: +52 55 1234 5678</li>
+    <li>Instagram: @goriviajes</li>
+    <li>Facebook: GoriviajesMX</li>
+  </ul>
+</section>
+
+<footer>
+  <p class="footer-info">&copy; 2025 Goriviajes. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
